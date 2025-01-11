@@ -75,4 +75,24 @@ public class FieldTest {
         // Game should be finished after moving right twice
         assertTrue(gameBoard.isFinished());
     }
+
+    @Test
+    public void oneWayFieldMoveNotPossible() throws Exception {
+        GameBoard gameBoard = new GameBoardImpl();
+        new CommandLoad(new String[]{"src/test/resources/testoneway.maze"}).execute(gameBoard);
+        Player player = gameBoard.getPlayer();
+
+        player.moveRight();
+        assertFalse(player.moveRight());
+    }
+
+    @Test
+    public void oneWayFieldMovePossible() throws Exception {
+        GameBoard gameBoard = new GameBoardImpl();
+        new CommandLoad(new String[]{"src/test/resources/testoneway.maze"}).execute(gameBoard);
+        Player player = gameBoard.getPlayer();
+
+        player.moveRight();
+        assertTrue(player.moveUp());
+    }
 }
