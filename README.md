@@ -138,7 +138,7 @@ mit einer weiteren Bewegung nach unten ins Ziel rutschen.
   * Der Spieler muss entsprechend auf dem aktuellen Eisfeld stehen bleiben, und `gameBoard.getPlayer().walkStep()` muss aufgerufen werden.
 * Die `enterField`-Funktion gibt immer `true` zurück - sie ist immer erfolgreich!
 
-### Task C - Neuer Command: fastmove
+### Task C - Neuer Command: fastmove [10%]
 
 Ein neuer Command namens `fastmove` soll hinzugefügt werden. Damit ist es möglich,
 mehrere move-Commands hintereinander auszuführen. Dabei sollen die Richtungen
