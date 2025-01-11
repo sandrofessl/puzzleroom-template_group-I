@@ -24,13 +24,13 @@ public class FieldOneWay extends BaseField {
 
     @Override
     public boolean leaveField(Direction direction) {
-        if (gameBoard.getField(row, col).getName() == '^' && direction.name().equals("Up")) {
+        if (name == '^' && direction.name().equals("Up")) {
             return true;
-        } else if (gameBoard.getField(row, col).getName() == '<' && direction.name().equals("Left")) {
+        } else if (name == '<' && direction.name().equals("Left")) {
             return true;
-        } else if (gameBoard.getField(row, col).getName() == '>' && direction.name().equals("Right")) {
+        } else if (name == '>' && direction.name().equals("Right")) {
             return true;
-        } else if (gameBoard.getField(row, col).getName() == 'v' && direction.name().equals("Down")) {
+        } else if (name == 'v' && direction.name().equals("Down")) {
             return true;
         } else {
             return false;
