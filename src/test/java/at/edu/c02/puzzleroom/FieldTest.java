@@ -95,4 +95,20 @@ public class FieldTest {
         player.moveRight();
         assertTrue(player.moveUp());
     }
+    @Test
+    public void iceFieldSlideToTargetRight() throws Exception {
+        GameBoard gameBoard = new GameBoardImpl();
+        new CommandLoad(new String[]{"src/test/resources/testiceRight.maze"}).execute(gameBoard);
+        Player player = gameBoard.getPlayer();
+        player.moveRight();
+        assertTrue(player.moveRight());
+    }
+    @Test
+    public void iceFieldSlideToTargetDownAndRight() throws Exception {
+        GameBoard gameBoard = new GameBoardImpl();
+        new CommandLoad(new String[]{"src/test/resources/testiceDownAndRight.maze"}).execute(gameBoard);
+        Player player = gameBoard.getPlayer();
+        player.moveDown();
+        assertTrue(player.moveRight());
+    }
 }
