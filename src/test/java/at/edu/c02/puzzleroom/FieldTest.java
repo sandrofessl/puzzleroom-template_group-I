@@ -77,6 +77,11 @@ public class FieldTest {
     }
 
     @Test
+
+    // bin mir nicht sicher, ob die beiden Tests korrekt sind? da wird nur gefragt,
+    // ob er rechts geht, wenn man rechts auswählt.
+    // bei der einbahn darf er ja nur auf einem bestimmten feld nur in eine richtung gehn.
+    // also ich denke, man müsste ihn zuerst auf ein dreiecksfeld stellen und dann prüfen
     public void oneWayFieldMoveNotPossible() throws Exception {
         GameBoard gameBoard = new GameBoardImpl();
         new CommandLoad(new String[]{"src/test/resources/testoneway.maze"}).execute(gameBoard);
@@ -84,6 +89,7 @@ public class FieldTest {
 
         player.moveRight();
         assertFalse(player.moveRight());
+
     }
 
     @Test
