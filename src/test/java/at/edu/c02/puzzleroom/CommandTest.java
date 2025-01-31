@@ -25,7 +25,7 @@ public class CommandTest {
     }
 
     @Test(expected = PuzzleRoomInvalidMoveException.class)
-    public void movePositiveTestNegative() throws Exception {
+    public void movePositiveTestNegativeInvalidMove() throws Exception {
         GameBoard gameBoard = new GameBoardImpl();
         new CommandLoad(new String[]{"src/test/resources/simple.maze"}).execute(gameBoard);
 
@@ -34,7 +34,7 @@ public class CommandTest {
     }
 
     @Test(expected = PuzzleRoomInvalidArgumentsException.class)
-    public void movePositiveTestNegative2() throws Exception {
+    public void movePositiveTestNegativeInvalidArgument() throws Exception {
         GameBoard gameBoard = new GameBoardImpl();
         new CommandLoad(new String[]{"src/test/resources/simple.maze"}).execute(gameBoard);
 
@@ -58,7 +58,7 @@ public class CommandTest {
     }
 
     @Test(expected = PuzzleRoomInvalidArgumentsException.class)
-    public void fastMoveNegativeTest1() throws Exception {
+    public void fastMoveNegativeTestInvalidArgument1() throws Exception {
         GameBoard gameBoard = new GameBoardImpl();
         new CommandLoad(new String[]{"src/test/resources/test.maze"}).execute(gameBoard);
 
@@ -67,7 +67,7 @@ public class CommandTest {
     }
 
     @Test(expected = PuzzleRoomInvalidArgumentsException.class)
-    public void fastMoveNegativeTest2() throws Exception {
+    public void fastMoveNegativeTestInvalidArgument2() throws Exception {
         GameBoard gameBoard = new GameBoardImpl();
         new CommandLoad(new String[]{"src/test/resources/test.maze"}).execute(gameBoard);
 
